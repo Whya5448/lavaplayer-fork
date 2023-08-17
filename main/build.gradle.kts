@@ -5,12 +5,14 @@ plugins {
 }
 
 val moduleName = "lavaplayer"
-version = "1.3.97-original"
+version = "1.4.3-original"
 
 dependencies {
   api("com.sedmelluq:lava-common:1.1.2")
-  implementation("com.sedmelluq:lavaplayer-natives:1.3.14")
-  implementation("org.slf4j:slf4j-api:1.7.25")
+  implementation("com.github.walkyst:lavaplayer-natives-fork:1.0.2")
+  implementation("com.github.walkyst.JAADec-fork:jaadec-ext-aac:0.1.3")
+  implementation("org.mozilla:rhino-engine:1.7.14")
+  api("org.slf4j:slf4j-api:1.7.25")
 
   api("org.apache.httpcomponents:httpclient:4.5.10")
   implementation("commons-io:commons-io:2.6")
@@ -20,6 +22,7 @@ dependencies {
 
   implementation("org.jsoup:jsoup:1.12.1")
   implementation("net.iharder:base64:2.3.9")
+  implementation("org.json:json:20220924")
 
   testImplementation("org.codehaus.groovy:groovy:2.5.5")
   testImplementation("org.spockframework:spock-core:1.2-groovy-2.5")
